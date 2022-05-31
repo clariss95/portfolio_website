@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url(photos/background2.png);
+    max-width: 3000px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0px 30px 550px 30px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: O.5fr 0.5fr;
+}
+
+.name h2 {
+    grid-column-start: 1;
+    margin: 0;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    font-family: 'Sacramento', cursive;
+    font-size: 2.7rem;
+}
+
+.menu {
+    position: relative;
+    bottom: 21rem;
+}
+
+.menu li {
+    display: inline;
+    list-style: none;
+    padding: 20px;
+    float: right
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 1rem;
+}
+
+.menu a:hover {
+    color: #b90e0a;
+}
+
+.greeting {
+    position: relative;
+    top: 15rem;
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.intro_container {
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.projects_container {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    padding: 0px 40px 5px 0px;
+}
+
+.text_icon1,
+.text_icon2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.text_icon1 h2,
+.text_icon2 h2 {
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 18px;
+}
+
+.project_count {
+    border: #ffc602 1px solid;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 5px 10px #888888;
+}
+
+.project_count img {
+    z-index: -1;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 65%
+}
+
+.intro h1 {
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 40px;
+}
+
+.intro p {
+    padding: 0 100px 0 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+
+.projectsnumber {
+    display: flex;
+    justify-content: center;
+}
+
+.projects_complete {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects_complete h1 {
+    font-size: 60px;
+    font-family: 'Spline Sans Mono', monospace;
+    display: flex;
+    align-self: center;
+    margin: 0;
+}
+
+.projects_complete h3 {
+    font-family: 'Spline Sans Mono', monospace;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 300;
+    display: flex;
+    align-self: flex-start;
+}
