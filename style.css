@@ -1,124 +1,161 @@
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+:root {
+    --purple2: #aa8eb7;
+    --purple1: #2b1631;
+    --purple3-bg: #d7b4f3;
+    --mustard: #ffc602;
+}
+
+
+/*add hireme button that takes person to the form*/
+
 header {
-    background-image: url(photos/background2.png);
-    max-width: 3000px;
-    height: 200px;
+    background-image: url(photos/background5.png);
+    min-width: 800px;
+    height: 800px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 0px 30px 550px 30px;
-    grid-column-start: 1;
-    grid-column-end: 4;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
-    grid-template-rows: O.5fr 0.5fr;
+.menu_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
 }
 
 .name h2 {
-    grid-column-start: 1;
+    display: flex;
     margin: 0;
     padding-top: 1rem;
     padding-left: 2rem;
     font-family: 'Sacramento', cursive;
     font-size: 2.7rem;
+    color: var(--purple2);
 }
 
 .menu {
+    display: flex;
+    align-self: flex-end;
+    padding-right: 5rem;
+}
+
+.header_wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5rem;
+}
+
+.greeting {
+    display: flex;
+    align-self: flex-end;
+    padding-right: 17rem;
+}
+
+.greeting h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.hello {
+    width: 41%;
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 2rem;
+    display: flex;
+    align-self: flex-end;
+}
+
+.hello h1 {
+    margin: 0;
+    z-index: 0;
+    color: var(--purple1);
+}
+
+.person {
     position: relative;
-    bottom: 21rem;
-    padding-right: 3rem;
+    bottom: 18rem;
+    left: 9rem;
+    overflow: visible;
+    z-index: 1;
 }
 
 .menu li {
     display: inline;
     list-style: none;
     padding: 20px;
-    float: right;
 }
 
 .menu a {
-    color: black;
+    color: #ffffff;
     text-decoration: none;
     font-family: 'Spline Sans Mono', monospace;
     font-size: 1rem;
 }
 
 .menu a:hover {
-    color: #b90e0a;
-}
-
-.greeting {
-    position: relative;
-    top: 15rem;
-    font-family: 'Spline Sans Mono', monospace;
-    font-size: 2rem;
-    padding-left: 2rem;
+    color: var(--purple1);
 }
 
 .intro_container {
     padding: 4rem;
     display: flex;
     flex-direction: row;
+    background-color: #2b1631;
 }
 
 .projects_container {
     display: flex;
     flex-direction: column;
     flex-basis: 30%;
-    padding: 0px 40px 5px 0px;
 }
 
-.text_icon1,
-.text_icon2 {
+.text_icon1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.text_icon1 h2,
-.text_icon2 h2 {
+    padding: 1rem 4rem 1rem 4rem;
     font-family: 'Spline Sans Mono', monospace;
     font-size: 18px;
-}
-
-.project_count {
     border: #ffc602 1px solid;
     border-radius: 15px;
-    margin-top: 20px;
+    margin: 20px 0 30px 0;
     box-shadow: 5px 10px #888888;
-}
-
-.project_count img {
-    z-index: -1;
+    width: 70%;
 }
 
 .intro {
     display: flex;
     flex-direction: column;
-    flex-basis: 65%
+    flex-basis: 65%;
+    margin-left: 2rem;
 }
 
 .intro h1 {
     font-family: 'Spline Sans Mono', monospace;
     font-size: 40px;
+    color: var(--purple2);
 }
 
 .intro p {
     padding: 0 100px 0 0;
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
+    color: #ffffff;
 }
 
 .projectsnumber {
     display: flex;
     justify-content: center;
+    background-color: #2b1631;
+    padding-bottom: 1.5rem;
 }
 
 .projects_complete {
@@ -126,6 +163,7 @@ header {
     align-self: center;
     flex-direction: column;
     justify-content: center;
+    color: #ffffff;
 }
 
 .projects_complete h1 {
@@ -134,6 +172,7 @@ header {
     display: flex;
     align-self: center;
     margin: 0;
+    color: var(--purple2);
 }
 
 .projects_complete h3 {
@@ -145,42 +184,176 @@ header {
     align-self: flex-start;
 }
 
-.experience {
+.projects_show {
+    padding-top: 2rem;
     background-color: #F5F5F5;
+}
+
+.projects_show h1 {
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 40px;
+    text-align: center;
+    color: var(--purple1);
+}
+
+
+/* Slideshow container */
+
+.slides_container {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+    border: var(--mustard) 1px solid;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 5px 10px #888888;
+}
+
+.slides_container img {
+    border-radius: 8px;
+    margin: 10px 10px 5px 10px;
+}
+
+
+/* Hide the images by default */
+
+.projects {
+    display: none;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Caption text */
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    width: 80%;
+    text-align: center;
+    background-color: black;
+    opacity: 60%;
+}
+
+
+/* The dots/bullets/indicators */
+
+.circles {
+    text-align: center
+}
+
+.circle {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+
+/* Fading animation */
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.experience {
+    background-color: #d7b4f3;
+    padding: 1.5rem;
+}
+
+.experience h1 {
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 40px;
+    text-align: center;
+    color: var(--purple1);
 }
 
 .job {
     display: flex;
     flex-direction: column;
-    padding-top: 1rem;
+    padding: 1rem;
+    border: #ffc602 1px solid;
+    border-radius: 15px;
+    margin: 20px;
+    padding-left: 2rem;
+    max-width: 33.3%;
+    background-color: #ffffff;
 }
 
-.dot {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    position: relative;
-    right: 0.5rem;
-    top: 0.5rem;
+.job1 {
+    display: flex;
+    justify-content: flex-start;
 }
 
-.dot1 {
-    background-color: #b90e0a;
+.job2 {
+    display: flex;
+    justify-content: center;
 }
 
-.dot2 {
-    background-color: #ffc602;
-}
-
-.dot3 {
-    background-color: #888888;
+.job3 {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .job h1 {
     display: flex;
     align-self: flex-start;
-    padding-left: 31rem;
-    padding-right: 20rem;
     font-family: 'Spline Sans Mono', monospace;
     font-size: 20px;
 }
@@ -188,17 +361,15 @@ header {
 .job h2 {
     display: flex;
     align-self: flex-start;
-    padding-left: 32rem;
-    padding-right: 20rem;
     font-family: 'Spline Sans Mono', monospace;
     font-size: 15px;
+    padding-top: 2rem;
 }
 
 .job p {
     display: flex;
     align-self: flex-start;
-    padding-left: 32rem;
-    padding-right: 20rem;
     font-family: 'Raleway', sans-serif;
     font-size: 15px;
+    padding-top: 0.5rem;
 }
