@@ -25,13 +25,13 @@
 
             <nav class="menu">
                 <li>
-                    <a href="projects.html">Projects</a>
+                    <a href="#projects_show">Projects</a>
                 </li>
                 <li>
-                    <a href="experience.html">Experience</a>
+                    <a href="#experience">Experience</a>
                 </li>
                 <li>
-                    <a href="aboutme.html">About me</a>
+                    <a href="#intro">About me</a>
                 </li>
             </nav>
 
@@ -107,14 +107,14 @@
 
 
 
-    <section class="intro">
+    <section id="intro">
 
         <div class="buttons_container">
 
 
             <div class="buttons">
-                <button class="button1">See my skills</button>
-                <button class="button1">Hire me</button>
+                <button onclick="scrollWin()" class="button1">See my skills</button>
+                <button onclick="scrollWin2()" class="button1">Hire me</button>
 
             </div>
         </div>
@@ -126,9 +126,18 @@
 
         <div class="intro_text">
             <h1>A little background...</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, deleniti. Libero, facilis maiores veritatis quo eius quos inventore aliquam corporis optio dolor molestiae voluptate qui cum, soluta ipsam placeat. Ex.</p>
+            <p>Hiiii there!</p>
 
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, deleniti. Libero, facilis maiores veritatis quo eius quos inventore aliquam corporis optio dolor molestiae voluptate qui cum, soluta ipsam placeat. Ex.</p>
+
+            <p>Nice to meet you! My name is Klara and this is my portfolio website. During my university studies I found out that I have a big interest in learning about technology. I started to learn SQL and basics of software testing and somehow landed
+                a position as a software tester at Česká spořitelna in 2021. </p>
+
+            <p>However, at the present I am on a working holiday in Canada and I am starting my master's studies this fall at the Memorial University of Newfoundland. I didn't want to forget all my new knowledge about software testing, instead I decided
+                to learn how to code and program as well. So right now I am concentrating on HTML/CSS while I am also trying to tame JavaScript</p>
+
+            <p>Feel free to browse through here and see my projects and skills. And in no case, don't hesitate to contact me if you'd like a custom built website or if you know about a job opening I could be a good fit for.</p>
+
+            <p>Thank you for visiting and I hope you'll enjoy this web! &#128079</p>
 
 
 
@@ -146,7 +155,7 @@
 
     </section>
 
-    <section class="projects_show">
+    <section id="projects_show">
 
         <h1>My Latest Projects</h1>
 
@@ -190,45 +199,57 @@
 
     </section>
 
-    <section class="experience">
+    <section id="experience">
 
         <h1>Work Experience</h1>
 
         <div class="job1">
-            <div class="job">
+            <div class="job waitress">
 
                 <h1>
                     Coding Waitress in Canada
                 </h1>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id eos tempora ab excepturi debitis illo dolorum, delectus corporis, unde totam quia eum iusto a. Eveniet in ex pariatur cupiditate beatae.</p>
+                <p>I'm a waitress at a modern restaurant. We use robotic cats to serve customers and ipads to take in their orders. I help customers with understanding our custom app as well as deliver their food and helping with the preparation of small
+                    dishes.
+                </p>
+
+
 
                 <h2>Sushi Island, Canada</h2>
                 <p>September 2021 - now</p>
             </div>
+            <img class="hide" src="/photos/sushi.svg" width="100px">
         </div>
 
 
 
         <div class="job2">
-            <div class="job">
+            <div class="job tester">
                 <h1> Junior Bug Explorer</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis officia soluta et placeat maxime nemo? Debitis, illum voluptates alias neque, necessitatibus soluta ea esse quasi quas modi, recusandae distinctio nobis.</p>
+                <p>As a junior software tester I was managing the test analysis, handling emergencies, and evaluating the performance of online banking system. I was working on the core banking system (central pricing tool) and its integration with other
+                    banking applications. I used SQL, UML diagrams (Enterprise Architect), test management tools (JIRA), and integration testing tools (SoapUI) on daily basis.</p>
 
                 <h2>Česká spořitelna, Czech republic</h2>
                 <p>June 2020 - June 2021</p>
             </div>
+            <img class="hide2" src="/photos/bug.svg" width="80px">
         </div>
+
+
         <div class="job3">
-            <div class="job">
+            <div class="job admin">
                 <h1> E-shop Admin</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis officia soluta et placeat maxime nemo? Debitis, illum voluptates alias neque, necessitatibus soluta ea esse quasi quas modi, recusandae distinctio nobis.
+                <p>I was testing new features implemented by the dev team to the web application before the release date to ensure customer have smooth experience visiting the eshop. My job was also communicating new possible use cases with the web developers.
                 </p>
 
                 <h2>Marten, Czech republic</h2>
                 <p>April 2014 - August 2014</p>
             </div>
+
+            <img class="hide3" src="/photos/bag.svg" width="80px">
         </div>
+
 
     </section>
 
@@ -267,6 +288,10 @@
                 <img src="/photos/soapui.svg" width="200px">
                 <h2>SoapUI</h2>
             </div>
+            <div class="icon Figma">
+                <img src="/photos/figma.svg" width="100px">
+                <h2>Figma</h2>
+            </div>
             <div class="icon progress ">
                 <img src="/photos/Yuppies - Bust.svg " width="168px ">
                 <p>More skills in progress.</p>
@@ -276,14 +301,38 @@
         <h3>You can download my resume <a href="/files/Klara_Steflova_Resume_0506.pdf">here</a>.</h3>
     </section>
 
-    <section class="contact_form ">
-        <h1>Contact form</h1>
+    <section class="contact_form">
+
+        <img class="emailpic" src="/photos/Yuppies - Emails.svg" width="500px">
+
+        <form onsubmit="event.preventDefault(); validateForm()">
+            <h1>Contact Me</h1>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your name">
+            <small class="error"></small>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="Your email">
+            <small class="error"></small>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" placeholder="Your message" row="10"></textarea>
+            <small class="error"></small>
+
+
+            <div class="center">
+                <input type="submit" value="Send Message">
+                <p id="success"></p>
+            </div>
+        </form>
+
+
     </section>
 
 
 
     <footer>
-        <p>2022, Klara Steflova</p>
+        <p>© 2022, Klara Steflova</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js " integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin=" anonymous " referrerpolicy="no-referrer "></script>
