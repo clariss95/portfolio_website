@@ -1,7 +1,10 @@
 const tl = gsap.timeline({ defaults: { duration: 2, ease: "power1.out" } })
 
-tl.fromTo('#Decoration', { opacity: 0 }, { opacity: 1, duration: 2 })
+tl.fromTo('.person', { x: -400, opacity: 0 }, { x: 0, opacity: 1, duration: 1.5 })
 tl.fromTo('#Coding', { scale: 0 }, { scale: 1, ease: "elastic.out(1.12)" })
+tl.fromTo('#Decoration', { opacity: 0 }, { opacity: 1, duration: 3.5 }, '<')
+
+
 
 let slideIndex = 1;
 showSlides(slideIndex);

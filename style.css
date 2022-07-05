@@ -1,375 +1,414 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --purple2: #aa8eb7;
-    --purple1: #2b1631;
-    --purple3-bg: #d7b4f3;
-    --mustard: #ffc602;
-}
-
-
-/*add hireme button that takes person to the form*/
-
-header {
-    background-image: url(photos/background5.png);
-    min-width: 800px;
-    height: 800px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.menu_wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between
-}
-
-.name h2 {
-    display: flex;
-    margin: 0;
-    padding-top: 1rem;
-    padding-left: 2rem;
-    font-family: 'Sacramento', cursive;
-    font-size: 2.7rem;
-    color: var(--purple2);
-}
-
-.menu {
-    display: flex;
-    align-self: flex-end;
-    padding-right: 5rem;
-}
-
-.header_wrapper {
-    display: flex;
-    flex-direction: column;
-    padding-right: 5rem;
-}
-
-.greeting {
-    display: flex;
-    align-self: flex-end;
-    padding-right: 17rem;
-}
-
-.greeting h2 {
-    font-family: 'Sacramento', cursive;
-    font-size: 2rem;
-    margin-top: 4rem;
-    margin-bottom: 1rem;
-    color: #ffffff;
-}
-
-.hello {
-    width: 41%;
-    font-family: 'Spline Sans Mono', monospace;
-    font-size: 2rem;
-    display: flex;
-    align-self: flex-end;
-}
-
-.hello h1 {
-    margin: 0;
-    z-index: 0;
-    color: var(--purple1);
-}
-
-.person {
-    position: relative;
-    bottom: 18rem;
-    left: 9rem;
-    overflow: visible;
-    z-index: 1;
-}
-
-.menu li {
-    display: inline;
-    list-style: none;
-    padding: 20px;
-}
-
-.menu a {
-    color: #ffffff;
-    text-decoration: none;
-    font-family: 'Spline Sans Mono', monospace;
-    font-size: 1rem;
-}
-
-.menu a:hover {
-    color: var(--purple1);
-}
-
-.intro_container {
-    padding: 4rem;
-    display: flex;
-    flex-direction: row;
-    background-color: #2b1631;
-}
-
-.projects_container {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 30%;
-}
-
-.text_icon1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 1rem 4rem 1rem 4rem;
-    font-family: 'Spline Sans Mono', monospace;
-    font-size: 18px;
-    border: #ffc602 1px solid;
-    border-radius: 15px;
-    margin: 20px 0 30px 0;
-    box-shadow: 5px 10px #888888;
-    width: 70%;
-}
-
-.intro {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 65%;
-    margin-left: 2rem;
-}
-
-.intro h1 {
-    font-family: 'Spline Sans Mono', monospace;
-    font-size: 40px;
-    color: var(--purple2);
-}
-
-.intro p {
-    padding: 0 100px 0 0;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    color: #ffffff;
-}
-
-.projectsnumber {
-    display: flex;
-    justify-content: center;
-    background-color: #2b1631;
-    padding-bottom: 1.5rem;
-}
-
-.projects_complete {
-    display: flex;
-    align-self: center;
-    flex-direction: column;
-    justify-content: center;
-    color: #ffffff;
-}
-
-.projects_complete h1 {
-    font-size: 60px;
-    font-family: 'Spline Sans Mono', monospace;
-    display: flex;
-    align-self: center;
-    margin: 0;
-    color: var(--purple2);
-}
-
-.projects_complete h3 {
-    font-family: 'Spline Sans Mono', monospace;
-    font-style: italic;
-    font-size: 20px;
-    font-weight: 300;
-    display: flex;
-    align-self: flex-start;
-}
-
-.projects_show {
-    padding-top: 2rem;
-    background-color: #F5F5F5;
-}
-
-.projects_show h1 {
-    font-family: 'Spline Sans Mono', monospace;
-    font-size: 40px;
-    text-align: center;
-    color: var(--purple1);
-}
-
-
-/* Slideshow container */
-
-.slides_container {
-    max-width: 500px;
-    position: relative;
-    margin: auto;
-    border: var(--mustard) 1px solid;
-    border-radius: 15px;
-    margin-top: 20px;
-    box-shadow: 5px 10px #888888;
-}
-
-.slides_container img {
-    border-radius: 8px;
-    margin: 10px 10px 5px 10px;
-}
-
-
-/* Hide the images by default */
-
-.projects {
-    display: none;
-}
-
-
-/* Next & previous buttons */
-
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-
-/* Position the "next button" to the right */
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-
-/* On hover, add a black background color with a little bit see-through */
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-/* Caption text */
-
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 10px;
-    left: 50px;
-    width: 80%;
-    text-align: center;
-    background-color: black;
-    opacity: 60%;
-}
-
-
-/* The dots/bullets/indicators */
-
-.circles {
-    text-align: center
-}
-
-.circle {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-    background-color: #717171;
-}
-
-
-/* Fading animation */
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-    to {
-        opacity: 1
+    
+     :root {
+        --purple2: #aa8eb7;
+        --purple1: #2b1631;
+        --purple3-bg: #d7b4f3;
+        --mustard: #ffc602;
+        --white-bg: #F5F5F5;
     }
-}
-
-.experience {
-    background-color: #d7b4f3;
-    padding: 1.5rem;
-}
-
-.experience h1 {
-    font-family: 'Spline Sans Mono', monospace;
-    font-size: 40px;
-    text-align: center;
-    color: var(--purple1);
-}
-
-.job {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    border: #ffc602 1px solid;
-    border-radius: 15px;
-    margin: 20px;
-    padding-left: 2rem;
-    max-width: 33.3%;
-    background-color: #ffffff;
-}
-
-.job1 {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.job2 {
-    display: flex;
-    justify-content: center;
-}
-
-.job3 {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.job h1 {
-    display: flex;
-    align-self: flex-start;
-    font-family: 'Spline Sans Mono', monospace;
-    font-size: 20px;
-}
-
-.job h2 {
-    display: flex;
-    align-self: flex-start;
-    font-family: 'Spline Sans Mono', monospace;
-    font-size: 15px;
-    padding-top: 2rem;
-}
-
-.job p {
-    display: flex;
-    align-self: flex-start;
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    padding-top: 0.5rem;
-}
+    
+    header {
+        background-image: url(photos/background5.png);
+        min-width: 800px;
+        height: 800px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .menu_wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between
+    }
+    
+    .name h2 {
+        display: flex;
+        margin: 0;
+        padding-top: 1rem;
+        padding-left: 2rem;
+        font-family: 'Sacramento', cursive;
+        font-size: 2.7rem;
+        color: var(--purple2);
+    }
+    
+    .menu {
+        display: flex;
+        align-self: flex-end;
+        padding-right: 5rem;
+    }
+    
+    .header_wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-right: 5rem;
+    }
+    
+    .greeting {
+        display: flex;
+        align-self: flex-end;
+        padding-right: 17rem;
+    }
+    
+    .greeting h2 {
+        font-family: 'Sacramento', cursive;
+        font-size: 2rem;
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+        color: #ffffff;
+    }
+    
+    .hello {
+        width: 41%;
+        font-family: 'Spline Sans Mono', monospace;
+        font-size: 2rem;
+        display: flex;
+        align-self: flex-end;
+    }
+    
+    .hello h1 {
+        margin: 0;
+        z-index: 0;
+        color: var(--purple1);
+    }
+    
+    .person {
+        position: relative;
+        bottom: 18rem;
+        left: 9rem;
+        overflow: visible;
+        z-index: 1;
+    }
+    
+    .menu li {
+        display: inline;
+        list-style: none;
+        padding: 20px;
+    }
+    
+    .menu a {
+        color: #ffffff;
+        text-decoration: none;
+        font-family: 'Spline Sans Mono', monospace;
+        font-size: 1rem;
+    }
+    
+    .menu a:hover {
+        color: var(--purple1);
+    }
+    
+    .intro {
+        padding: 2rem;
+        display: flex;
+        flex-direction: row;
+        background-color: #2b1631;
+    }
+    
+    .buttons_container {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 30%;
+    }
+    
+    .button1 {
+        align-items: center;
+        padding: 1rem 4rem 1rem 4rem;
+        font-family: 'Spline Sans Mono', monospace;
+        font-size: 18px;
+        border: #ffc602 1px solid;
+        border-radius: 15px;
+        margin: 20px 0 30px 0;
+        box-shadow: 5px 10px #888888;
+        width: 70%;
+    }
+    
+    .intro_text {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 65%;
+        padding-left: 3rem;
+    }
+    
+    .intro_text h1 {
+        font-family: 'Spline Sans Mono', monospace;
+        font-size: 40px;
+        color: var(--purple2);
+    }
+    
+    .intro_text p {
+        padding: 0 100px 0 0;
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        color: #ffffff;
+    }
+    
+    .projectsnumber {
+        display: flex;
+        justify-content: center;
+        background-color: #2b1631;
+        padding: 2rem;
+    }
+    
+    .projects_complete {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        justify-content: center;
+        color: #ffffff;
+    }
+    
+    .projects_complete h1 {
+        font-size: 60px;
+        font-family: 'Spline Sans Mono', monospace;
+        display: flex;
+        align-self: center;
+        margin: 0;
+        color: var(--purple2);
+    }
+    
+    .projects_complete h3 {
+        font-family: 'Spline Sans Mono', monospace;
+        font-style: italic;
+        font-size: 20px;
+        font-weight: 300;
+        display: flex;
+        align-self: flex-start;
+    }
+    
+    .projects_show {
+        padding: 2rem;
+        background-color: var(--white-bg);
+    }
+    
+    .projects_show h1 {
+        font-family: 'Spline Sans Mono', monospace;
+        font-size: 40px;
+        text-align: center;
+        color: var(--purple1);
+    }
+    /* Slideshow container */
+    
+    .slides_container {
+        max-width: 500px;
+        position: relative;
+        margin: auto;
+        border: var(--mustard) 1px solid;
+        border-radius: 15px;
+        margin-top: 20px;
+        box-shadow: 5px 10px #888888;
+    }
+    
+    .slides_container img {
+        border-radius: 8px;
+        margin: 10px 10px 5px 10px;
+    }
+    /* Hide the images by default */
+    
+    .projects {
+        display: none;
+    }
+    /* Next & previous buttons */
+    
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+    /* Position the "next button" to the right */
+    
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    /* On hover, add a black background color with a little bit see-through */
+    
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    /* Caption text */
+    
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 10px;
+        left: 50px;
+        width: 80%;
+        text-align: center;
+        background-color: black;
+        opacity: 60%;
+    }
+    /* The dots/bullets/indicators */
+    
+    .circles {
+        text-align: center
+    }
+    
+    .circle {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+    /* Fading animation */
+    
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+    
+    .experience {
+        background-color: #d7b4f3;
+        padding: 2rem;
+    }
+    
+    .experience h1 {
+        font-family: 'Spline Sans Mono', monospace;
+        font-size: 40px;
+        text-align: center;
+        color: var(--purple1);
+    }
+    
+    .job {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        border: #ffc602 1px solid;
+        border-radius: 15px;
+        margin: 20px;
+        padding-left: 2rem;
+        max-width: 33.3%;
+        background-color: #ffffff;
+    }
+    
+    .job1 {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .job2 {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .job3 {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .job h1 {
+        display: flex;
+        align-self: flex-start;
+        font-family: 'Spline Sans Mono', monospace;
+        font-size: 20px;
+    }
+    
+    .job h2 {
+        display: flex;
+        align-self: flex-start;
+        font-family: 'Spline Sans Mono', monospace;
+        font-size: 15px;
+        padding-top: 2rem;
+    }
+    
+    .job p {
+        display: flex;
+        align-self: flex-start;
+        font-family: 'Raleway', sans-serif;
+        font-size: 15px;
+        padding-top: 0.5rem;
+    }
+    
+    .skills {
+        background-color: var(--white-bg);
+        padding: 2rem;
+    }
+    
+    .skills h1 {
+        font-family: 'Spline Sans Mono', monospace;
+        font-size: 40px;
+        text-align: center;
+        color: var(--purple1);
+    }
+    
+    .skillsGrid {
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        justify-content: center;
+        gap: 1rem;
+        padding-top: 2rem;
+    }
+    
+    .skills p,
+    h3 {
+        text-align: center;
+        padding-top: 2rem;
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+    }
+    
+    .skills a {
+        color: var(--purple2)
+    }
+    
+    .skills a:hover {
+        color: var(--purple1)
+    }
+    
+    .skillsGrid img {
+        height: 200px;
+    }
+    
+    .skillsGrid h2 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 17px;
+    }
+    
+    .skillsGrid p {
+        padding: 0;
+    }
+    
+    .icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: var(--purple2) 2px solid;
+        border-radius: 15px;
+        background-color: #ffffff;
+        padding: 0rem 1rem 0.5rem 1rem;
+    }
