@@ -86,7 +86,7 @@ function scrollWin() {
     window.scrollBy({
         top: 2800,
         left: 0,
-        behavior: 'instant'
+        behavior: 'smooth'
     });
 
 }
@@ -96,7 +96,7 @@ function scrollWin2() {
     window.scrollBy({
         top: 5000,
         left: 0,
-        behavior: 'instant'
+        behavior: 'smooth'
     });
 
 }
