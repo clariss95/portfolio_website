@@ -313,25 +313,24 @@
 
         <img class="emailpic" src="/photos/Yuppies - Emails.svg" width="500px">
 
-        <form action="POST" data-netlify="true">
+
+
+        <form class=".contact_form" name="contact" method="POST" data-netlify="true">
             <h1>Contact Me</h1>
-            <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Your name">
-            <small class="error"></small>
+            <p>
+                <label>Your Name: <input type="text" name="name" placeholder="Your name" required /></label>
+            </p>
+            <p>
+                <label>Your Email: <input type="email" name="email" placeholder="Your email" required /></label>
+            </p>
 
-            <label for="email">Email:</label>
-            <input type="text" id="email" placeholder="Your email">
-            <small class="error"></small>
-
-            <label for="message">Your Message:</label>
-            <textarea id="message" placeholder="Your message" row="10"></textarea>
-            <small class="error"></small>
-
-
-            <div class="center">
-                <input type="submit" value="Send Message">
-                <p id="success"></p>
-            </div>
+            <p>
+                <label>Message: <textarea name="message" placeholder="Your message" row="10" required></textarea></label>
+            </p>
+            <p>
+                <button class="button2" type="submit">Send Message</button>
+            </p>
+        </form>
         </form>
 
 
