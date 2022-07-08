@@ -35,6 +35,7 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
+/*
 const nameInput = document.querySelector("#name");
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
@@ -42,6 +43,7 @@ const success = document.querySelector("#success");
 const errorNodes = document.querySelectorAll(".error");
 
 
+onsubmit="event.preventDefault(); validateForm()"
 function validateForm() {
     clearMessages()
     let errorFlag = false;
@@ -80,7 +82,7 @@ function emailIsValid(email) {
     let pattern = /\S+@\S+\.\S+/;
     return pattern.test(email);
 }
-
+*/
 function scrollWin() {
 
     window.scrollBy({
