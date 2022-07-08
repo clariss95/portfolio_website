@@ -259,7 +259,7 @@ header {
 .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 42%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
