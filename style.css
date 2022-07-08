@@ -83,9 +83,6 @@ header {
     overflow: visible;
     justify-content: flex-end;
     z-index: 1;
-    /* position: absolute;
-    bottom: 0.2rem;
-    left: 9rem;*/
 }
 
 .menu li {
@@ -237,10 +234,8 @@ header {
     color: var(--purple1);
 }
 
-
-/* Slideshow container */
-
 .slides_container {
+    position: relative;
     display: flex;
     flex-direction: column;
     max-width: 500px;
@@ -256,15 +251,9 @@ header {
     margin: 10px 10px 5px 10px;
 }
 
-
-/* Hide the images by default */
-
 .projects {
     display: none;
 }
-
-
-/* Next & previous buttons */
 
 .prev,
 .next {
@@ -282,24 +271,15 @@ header {
     user-select: none;
 }
 
-
-/* Position the "next button" to the right */
-
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-
-/* On hover, add a black background color with a little bit see-through */
-
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-
-
-/* Caption text */
 
 .text {
     color: #f2f2f2;
@@ -317,9 +297,6 @@ header {
     font-family: 'Spline Sans Mono', monospace;
     padding-top: 0.5rem;
 }
-
-
-/* The dots/bullets/indicators */
 
 .circles {
     text-align: center
@@ -340,9 +317,6 @@ header {
 .dot:hover {
     background-color: #717171;
 }
-
-
-/* Fading animation */
 
 .fade {
     animation-name: fade;
