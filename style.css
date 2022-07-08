@@ -634,9 +634,9 @@ footer p {
     .name h2 {
         color: var(--white);
     }
-    .button1 {
+    .button2 {
         font-size: 15px;
-        padding: 10px;
+        color: black;
     }
     .button1:hover {
         animation: none;
